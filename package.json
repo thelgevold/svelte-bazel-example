@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "@bazel/ibazel": "0.5.0",
+    "@bazel/typescript": "0.17.0",
+    "typescript": "2.9.2",
+    "svelte": "2.13.5",
+    "express": "4.16.3"
+  },
+  "scripts": {
+    "start-frontend": "ibazel run //src/frontend:server",
+    "start-backend": "ibazel run //src/backend:api",
+    "start": "concurrently \"npm run start-frontend\" \"npm run start-backend\" "
+  },
+  "dependencies": {
+    "concurrently": "4.0.1"
+  }
+}

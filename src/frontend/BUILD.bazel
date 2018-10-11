@@ -1,0 +1,42 @@
+package(default_visibility = ["//visibility:public"])
+
+load("//svelte:svelte.bzl", "svelte")
+load("//svelte:bundle.bzl", "bundle")
+load("@io_bazel_rules_sass//sass:sass.bzl", "sass_binary")
+
+svelte(
+  name = "app",
+  srcs = ["main.js"],
+  entry_point = "App.html",
+  deps = ["//src/frontend/treeview", 
+          "//src/frontend/grid",
+          "//src/frontend/friends"
+  ]
+)
+
+sass_binary(
+  name = "styles",
+  src = "app.scss",
+  deps = [
+    "//src/frontend/styles"
+  ]
+)
+
+bundle(
+  name = "bundle",
+  entry_point = "main.js",
+  deps = [
+    ":app",
+    ":styles"
+  ],
+)
+
+load("@build_bazel_rules_nodejs//:defs.bzl", "history_server")
+
+history_server(
+  name = "server",
+  data = [
+      "index.html",
+      ":bundle"
+  ],
+)
