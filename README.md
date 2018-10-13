@@ -7,3 +7,5 @@
 This demo application consists of two parts
  - Frontend written in Svelte
  - Node backend written in Typescript
+
+Blog post: http://www.syntaxsuccess.com/viewarticle/svelte-bazel-build
