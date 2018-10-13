@@ -1,6 +1,6 @@
 1) Install Bazel from https://docs.bazel.build/versions/master/install.html
 
-2) run `npm run start`
+2) run `npm install` and `npm run start`
 
 3) Browse to http://localhost:8080
 
