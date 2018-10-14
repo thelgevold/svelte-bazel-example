@@ -1,7 +1,8 @@
 package(default_visibility = ["//visibility:public"])
 
 load("//svelte:svelte.bzl", "svelte")
-load("//svelte:bundle.bzl", "bundle")
+load("//svelte:bundle-dev.bzl", "bundle_dev")
+load("//svelte:bundle-prod.bzl", "bundle_prod")
 load("@io_bazel_rules_sass//sass:sass.bzl", "sass_binary")
 
 svelte(
@@ -22,8 +23,17 @@ sass_binary(
   ]
 )
 
-bundle(
-  name = "bundle",
+bundle_dev(
+  name = "bundle_dev",
+  entry_point = "main.js",
+  deps = [
+    ":app",
+    ":styles"
+  ],
+)
+
+bundle_prod(
+  name = "bundle_prod",
   entry_point = "main.js",
   deps = [
     ":app",
@@ -37,6 +47,6 @@ history_server(
   name = "server",
   data = [
       "index.html",
-      ":bundle"
+      ":bundle_prod"
   ],
 )
