@@ -1,8 +1,10 @@
 package(default_visibility = ["//visibility:public"])
 
+load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary")
 load("//svelte:svelte.bzl", "svelte")
 load("//svelte:bundle-dev.bzl", "bundle_dev")
 load("//svelte:bundle-prod.bzl", "bundle_prod")
+
 load("@io_bazel_rules_sass//sass:sass.bzl", "sass_binary")
 
 svelte(
@@ -23,15 +25,6 @@ sass_binary(
   ]
 )
 
-bundle_dev(
-  name = "bundle_dev",
-  entry_point = "main.js",
-  deps = [
-    ":app",
-    ":styles"
-  ],
-)
-
 bundle_prod(
   name = "bundle_prod",
   entry_point = "main.js",
@@ -41,12 +34,37 @@ bundle_prod(
   ],
 )
 
-load("@build_bazel_rules_nodejs//:defs.bzl", "history_server")
+bundle_dev(
+  name = "bundle_dev",
+  entry_point = "main.js",
+  deps = [
+    ":app",
+    ":styles"
+  ],
+)
 
-history_server(
-  name = "server",
+nodejs_binary(
+  name = "dev_server",
+  entry_point = "lite-server/bin/lite-server",
+  templated_args = ["--baseDir=src/frontend"],
+  tags = ["ibazel_notify_changes"],
   data = [
       "index.html",
-      ":bundle_prod"
+      ":bundle_dev",
+      "@npm//lite-server",
+  ],
+)
+
+nodejs_binary(
+  name = "prod_server",
+  entry_point = "lite-server/bin/lite-server",
+  templated_args = ["--baseDir=src/frontend", "--config=src/frontend/bs-config-prod.js"],
+  tags = ["ibazel_notify_changes"],
+  data = [
+      "index-prod.html",
+      ":bundle_prod",
+      "@npm//lite-server",
+      "@npm//compression",
+      "bs-config-prod.js"
   ],
 )

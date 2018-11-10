@@ -5,11 +5,14 @@ ts_library(
   name = "ts_server",
   srcs = glob(["*.ts"]),
   tsconfig = "//:tsconfig.json",
+  deps = ["@npm//express"]
 )
 
 nodejs_binary(
   name = "api", 
-  data = [":ts_server"],
-  node_modules = "//:node_modules",
+  data = [
+    ":ts_server",
+    "@npm//express"
+  ],
   entry_point = "../server.js",
 ) 
