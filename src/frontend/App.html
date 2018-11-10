@@ -1,5 +1,8 @@
 <div>
     <h1>{title}</h1>
+
+    <h4>Teams</h4>
+    <Team0></Team0>
   
     <h4>Grid</h4>
     <Grid></Grid>
@@ -9,12 +12,15 @@
 
     <h4>Friends</h4>
     <Friends></Friends>
+    
   </div>
   
   <script>
     import Grid from './grid/grid';
     import Treeview from './treeview/treeview';
     import Friends from './friends/friends'
+
+    import Team0 from './teams/team0/team'
 
     import { LocationService } from './treeview/location-service';
   
@@ -32,7 +38,8 @@
       components: {
         Treeview,
         Grid,
-        Friends
+        Friends,
+        Team0
       }
     }; 
   </script>

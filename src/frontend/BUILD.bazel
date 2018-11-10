@@ -13,7 +13,8 @@ svelte(
   entry_point = "App.html",
   deps = ["//src/frontend/treeview", 
           "//src/frontend/grid",
-          "//src/frontend/friends"
+          "//src/frontend/friends",
+          "//src/frontend/teams/team0:team"
   ]
 )
 

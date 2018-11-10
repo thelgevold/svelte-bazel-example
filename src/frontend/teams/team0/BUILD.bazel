@@ -1,0 +1,19 @@
+package(default_visibility = ["//visibility:public"])
+load("//svelte:svelte.bzl", "svelte")
+
+svelte(
+  name = "team",
+  entry_point = "team.html",
+  deps = [
+    "//src/frontend/teams/team0/module0:mod",
+    "//src/frontend/teams/team0/module1:mod",
+    "//src/frontend/teams/team0/module2:mod",
+    "//src/frontend/teams/team0/module3:mod",
+    "//src/frontend/teams/team0/module4:mod",
+    "//src/frontend/teams/team0/module5:mod",
+    "//src/frontend/teams/team0/module6:mod",
+    "//src/frontend/teams/team0/module7:mod",
+    "//src/frontend/teams/team0/module8:mod",
+    "//src/frontend/teams/team0/module9:mod",
+  ]
+)
