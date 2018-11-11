@@ -8,7 +8,9 @@ def _bundle_dev(ctx):
   args.add(["--input", ctx.bin_dir.path + "/" + ctx.file.entry_point.path])
   args.add(["--output.file", ctx.outputs.build.path])
   args.add(["--output.format", "iife"])
-  
+  args.add("--no-treeshake")
+  args.add("--no-indent")
+
   ctx.action(
       executable = ctx.executable._rollup,
       inputs = files,
