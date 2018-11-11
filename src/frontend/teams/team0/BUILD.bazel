@@ -15,5 +15,15 @@ svelte(
     "//src/frontend/teams/team0/module7:mod",
     "//src/frontend/teams/team0/module8:mod",
     "//src/frontend/teams/team0/module9:mod",
+    "//src/frontend/teams/team0/module10:mod",
+    "//src/frontend/teams/team0/module11:mod",
+    "//src/frontend/teams/team0/module12:mod",
+    "//src/frontend/teams/team0/module13:mod",
+    "//src/frontend/teams/team0/module14:mod",
+    "//src/frontend/teams/team0/module15:mod",
+    "//src/frontend/teams/team0/module16:mod",
+    "//src/frontend/teams/team0/module17:mod",
+    "//src/frontend/teams/team0/module18:mod",
+    "//src/frontend/teams/team0/module19:mod",
   ]
 )

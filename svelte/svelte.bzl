@@ -23,7 +23,8 @@ def _svelte(ctx):
   args.add(["compile", ctx.file.entry_point.path])
   args.add(["-o", ctx.outputs.build.path])
 
-  ctx.actions.run( 
+  ctx.actions.run(
+      mnemonic = "Svelte",
       executable = ctx.executable._svelte,
       outputs = [ctx.outputs.build],
       inputs = [ctx.file.entry_point],
