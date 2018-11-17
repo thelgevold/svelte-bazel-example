@@ -1,1 +1,6 @@
 build --symlink_prefix=dist/
+
+build --jobs=30
+build --remote_executor=Torgeirs-MBP.home:8980
+
+build --spawn_strategy=remote --genrule_strategy=remote --strategy=Javac=remote --strategy=Svelte=remote
