@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('GIT') {
-            node {
+            steps {
               echo 'Pulling...' + env.BRANCH_NAME
               checkout scm
             }
