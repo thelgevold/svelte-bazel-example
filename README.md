@@ -10,3 +10,5 @@ This demo application consists of two parts
 
 Blog post: http://www.syntaxsuccess.com/viewarticle/svelte-bazel-build
 
+
+
