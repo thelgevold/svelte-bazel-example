@@ -9,3 +9,6 @@ This demo application consists of two parts
  - Node backend written in Typescript
 
 Blog post: http://www.syntaxsuccess.com/viewarticle/svelte-bazel-build
+
+
+
