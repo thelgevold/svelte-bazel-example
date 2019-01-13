@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('GIT') {
             steps {
-                git branch: '*/**',
-                url: 'https://github.com/thelgevold/svelte-bazel-example.git'
+                checkout([$class: 'GitSCM', branches: [[name: '**']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'LocalBranch', localBranch: "${GIT_BRANCH_LOCAL}"]], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/thelgevold/svelte-bazel-example.git']]])
             }
         }
         stage('Yarn') {
