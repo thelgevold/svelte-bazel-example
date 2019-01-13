@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('GIT') {
             steps {
-                git branch: 'large-example',
+                git branch: '*/**',
                 url: 'https://github.com/thelgevold/svelte-bazel-example.git'
             }
         }
