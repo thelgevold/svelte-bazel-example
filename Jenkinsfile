@@ -3,8 +3,9 @@ pipeline {
 
     stages {
         stage('GIT') {
-            steps {
-                checkout([$class: 'GitSCM', branches: [[name: '**']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'LocalBranch', localBranch: "${GIT_BRANCH_LOCAL}"]], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/thelgevold/svelte-bazel-example.git']]])
+            node {
+              echo 'Pulling...' + env.BRANCH_NAME
+              checkout scm
             }
         }
         stage('Yarn') {
