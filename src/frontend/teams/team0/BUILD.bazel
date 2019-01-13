@@ -3,7 +3,7 @@ load("//svelte:svelte.bzl", "svelte")
 
 svelte(
   name = "team",
-  entry_point = "team.html",
+  entry_point = "Team.html",
   deps = [
     "//src/frontend/teams/team0/module0:mod",
     "//src/frontend/teams/team0/module1:mod",
