@@ -7,6 +7,7 @@
     "svelte": "2.13.5",
     "typescript": "2.9.2"
   },
+  
   "scripts": {
     "start-backend": "ibazel run //src/backend:api",
     "start-prod": "concurrently \"ibazel run //src/frontend:prod_server\" \"npm run start-backend\" ",
