@@ -12,6 +12,7 @@
     "start-prod": "concurrently \"ibazel run //src/frontend:prod_server\" \"npm run start-backend\" ",
     "start-dev": "concurrently \"ibazel run //src/frontend:dev_server\" \"npm run start-backend\" "
   },
+  
   "dependencies": {
     "express": "4.16.3",
     "compression": "1.7.2"
