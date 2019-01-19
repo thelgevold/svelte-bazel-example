@@ -3,5 +3,5 @@ load("//svelte:svelte.bzl", "svelte")
 
 svelte(
   name = "grid",
-  entry_point = "Grid444.html"
+  entry_point = "Grid444ddd.html"
 )
