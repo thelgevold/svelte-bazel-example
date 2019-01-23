@@ -32,7 +32,7 @@ pipeline {
     }
     stage('Copy Files') {
       steps{
-        sh 'cp -Lr dist dist_files'
+        sh 'rm -rf dist_files && cp -Lr dist dist_files'
       }
     }
     stage('Build image') {
