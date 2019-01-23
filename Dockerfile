@@ -1,4 +1,4 @@
 
 FROM node:10
 
-ADD dist /usr/
+COPY dist/ /usr/
