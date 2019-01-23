@@ -1,4 +1,4 @@
 
 FROM node:10
 
-RUN cp -dR dist /usr/ -r
+RUN cp -dR dist /usr/
