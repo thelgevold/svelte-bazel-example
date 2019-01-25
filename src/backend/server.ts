@@ -15,4 +15,9 @@ app.get("/friends", (_req, res) => {
   res.json(["Joe", "Mary", "Peter", "Lisa"]);
 });
 
+app.get('/', (_req, res) => {
+  res.render('index.html');
+});
+
+
 app.listen(5000, () => console.log("Example app listening on port 5000"));
