@@ -38,7 +38,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build registry + ":latest-5"
+          dockerImage = docker.build registry + ":latest-a"
         }
       }
     }
@@ -53,7 +53,7 @@ pipeline {
     }
     stage('Remove image') {
       steps{
-        sh 'docker rmi $registry:latest-5'
+        sh 'docker rmi $registry:latest-a'
       }
     }
   }

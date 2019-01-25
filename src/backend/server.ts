@@ -4,6 +4,7 @@ const app = express();
 
 import * as mustacheExpress from 'mustache-express';
 
+app.use('/', express.static('/usr/dist_files'));
 app.engine('html', mustacheExpress());
 app.set('view engine', 'html');
 app.set('views', '/usr/dist_files');
