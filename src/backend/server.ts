@@ -6,6 +6,7 @@ import * as mustacheExpress from 'mustache-express';
 
 app.engine('html', mustacheExpress());
 app.set('view engine', 'html');
+app.set('views', '/usr/dist_files');
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
