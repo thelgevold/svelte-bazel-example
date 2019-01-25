@@ -16,7 +16,7 @@ app.get("/friends", (_req, res) => {
 });
 
 app.get('/', (_req, res) => {
-  res.render('index.html');
+  res.sendfile('index.html');
 });
 
 
