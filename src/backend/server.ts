@@ -1,5 +1,5 @@
 import * as express from "express";
-
+declare const process: any;
 const app = express();
 
 import * as mustacheExpress from 'mustache-express';
