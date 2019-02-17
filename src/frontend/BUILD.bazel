@@ -14,16 +14,6 @@ svelte(
   deps = ["//src/frontend/treeview", 
           "//src/frontend/grid",
           "//src/frontend/friends",
-          "//src/frontend/teams/team0:team",
-          "//src/frontend/teams/team1:team",
-          "//src/frontend/teams/team2:team",
-          "//src/frontend/teams/team3:team",
-          "//src/frontend/teams/team4:team",
-          "//src/frontend/teams/team5:team",
-          "//src/frontend/teams/team6:team",
-          "//src/frontend/teams/team7:team",
-          "//src/frontend/teams/team8:team",
-          "//src/frontend/teams/team9:team"
   ]
 )
 

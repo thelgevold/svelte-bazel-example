@@ -1,7 +1,0 @@
-package(default_visibility = ["//visibility:public"])
-load("//svelte:svelte.bzl", "svelte")
-
-svelte(
-  name = "cmp7",
-  entry_point = "Cmp.html"
-)
