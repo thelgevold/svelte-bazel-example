@@ -22,7 +22,6 @@ http_archive(
     sha256 = "700a19d6d503500bd8dc190d7e29588c16867c2e163d7c8a883879ff602ef527"
 ) 
 
-# Setup the NodeJS toolchain
 load("@build_bazel_rules_nodejs//:defs.bzl", "node_repositories", "yarn_install")
 node_repositories()
 

@@ -1,8 +1,6 @@
-1) Install Bazel from https://docs.bazel.build/versions/master/install.html
+1) run `yarn install`
 
-2) run `yarn install`
-
-3) run `yarn start-dev` or `start-prod` for dev build or production build respectively
+2) run `yarn start-dev` or `start-prod` for dev build or production build respectively
 
 This demo application consists of two parts
  - Frontend written in Svelte

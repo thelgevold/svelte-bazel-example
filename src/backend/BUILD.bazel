@@ -5,7 +5,7 @@ ts_library(
   name = "ts_server",
   srcs = glob(["*.ts"]),
   tsconfig = "//:tsconfig.json",
-  deps = ["@npm//express", "@npm//mustache-express"]
+  deps = ["@npm//express"]
 )
 
 nodejs_binary(

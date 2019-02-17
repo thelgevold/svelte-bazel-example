@@ -1,7 +1,8 @@
 {
   "devDependencies": {
-    "@bazel/ibazel": "0.5.0",
+    "@bazel/ibazel": "0.9.1",
     "@bazel/typescript": "0.25.0",
+    "@bazel/bazel": "0.21.0",
     "concurrently": "4.0.1",
     "lite-server": "2.4.0",
     "typescript": "2.9.2"
@@ -9,11 +10,11 @@
   "scripts": {
     "start-backend": "ibazel run //src/backend:api",
     "start-prod": "concurrently \"ibazel run //src/frontend:prod_server\" \"npm run start-backend\" ",
-    "start-dev": "concurrently \"ibazel run //src/frontend:dev_server\" \"npm run start-backend\" "
+    "start-dev": "concurrently \"ibazel run //src/frontend:dev_server\" \"npm run start-backend\" ",
+    "bazel-version": "bazel version"
   },
   "dependencies": {
     "express": "4.16.3",
-    "compression": "1.7.2",
-    "mustache-express": "^1.2.1"
+    "compression": "1.7.2"
   }
 }
