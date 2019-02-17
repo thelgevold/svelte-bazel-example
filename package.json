@@ -4,7 +4,6 @@
     "@bazel/typescript": "0.25.0",
     "concurrently": "4.0.1",
     "lite-server": "2.4.0",
-    "svelte": "2.16.1",
     "typescript": "2.9.2"
   },
   "scripts": {
