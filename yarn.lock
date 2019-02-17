@@ -6,13 +6,15 @@
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.5.0.tgz#76f269bd60d866e2aa9e86b25c456d18fee2ef54"
 
-"@bazel/typescript@0.20.3":
-  version "0.20.3"
-  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.20.3.tgz#51dcc369c2af0d7f2311d6e692d07776492060f4"
+"@bazel/typescript@0.25.0":
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.25.0.tgz#ad50ef443b3044a2a399989c0b4068f2a2cacb6b"
+  integrity sha512-yV1UaqF6JVg5iTCy9vMtM82LJLWvW2L6CirnuE0HNfUL9JnkEY2+YFcXrfG/TsBZilDfB7bx2w3NkxfBqnW0Dg==
   dependencies:
+    jasmine-core "2.8.0"
     protobufjs "5.0.3"
+    semver "5.6.0"
     source-map-support "0.5.9"
-    tsickle "0.28.0"
     tsutils "2.27.2"
 
 abbrev@1:
@@ -1312,6 +1314,11 @@ isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
 
+jasmine-core@2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.8.0.tgz#bcc979ae1f9fd05701e45e52e65d3a5d63f1a24e"
+  integrity sha1-vMl5rh+f0FcB5F5S5l06XWPxok4=
+
 json-parse-better-errors@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz#bb867cfb3450e69107c131d1c514bab3dc8bcaa9"
@@ -2138,9 +2145,10 @@ sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
-"semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.5.0:
+"semver@2 || 3 || 4 || 5", semver@5.6.0, semver@^5.3.0, semver@^5.5.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.6.0.tgz#7e74256fbaa49c75aa7c7a205cc22799cac80004"
+  integrity sha512-RS9R6R35NYgQn++fkDWaOmqGoj4Ek9gGs+DPxNUZKuwE183xjJroKvyo1IzVFeXvUrvmALy6FWD5xrdJT25gMg==
 
 send@0.16.2:
   version "0.16.2"
@@ -2308,7 +2316,7 @@ source-map-resolve@^0.5.0:
     source-map-url "^0.4.0"
     urix "^0.1.0"
 
-source-map-support@0.5.9, source-map-support@^0.5.0:
+source-map-support@0.5.9:
   version "0.5.9"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.9.tgz#41bc953b2534267ea2d605bccfa7bfa3111ced5f"
   dependencies:
@@ -2505,15 +2513,6 @@ to-regex@^3.0.1, to-regex@^3.0.2:
 tree-kill@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.0.tgz#5846786237b4239014f05db156b643212d4c6f36"
-
-tsickle@0.28.0:
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.28.0.tgz#6cd6fa004766c6ad9261b599c83866ee97cc7875"
-  dependencies:
-    minimist "^1.2.0"
-    mkdirp "^0.5.1"
-    source-map "^0.6.0"
-    source-map-support "^0.5.0"
 
 tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
