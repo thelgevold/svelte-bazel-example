@@ -9,7 +9,9 @@
   },
   "scripts": {
     "start-prod": "bazel run //src/server",
-    "start-dev": "ibazel run //src/client:dev_server"
+    "start-dev": "ibazel run //src/client:dev_server",
+    "create-docker-image": "bazel run //src/server:app_image",
+    "push-docker-image": "bazel run //src/server:push"
   },
   "dependencies": {
     "express": "4.16.3",

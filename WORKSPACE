@@ -64,3 +64,9 @@ load(
 )
 
 _nodejs_image_repos()
+
+load(
+    "@io_bazel_rules_docker//repositories:repositories.bzl",
+    container_repositories = "repositories",
+)
+container_repositories()
