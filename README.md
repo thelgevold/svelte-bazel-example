@@ -4,7 +4,7 @@
 
 This demo application consists of two parts
  - Frontend written in Svelte
- - Node backend written in Typescript
+ - Node/Express application written in Typescript
 
 Blog posts: 
 
