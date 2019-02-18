@@ -1,0 +1,31 @@
+load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary")
+load("@npm_bazel_typescript//:defs.bzl", "ts_library")
+load("@io_bazel_rules_docker//nodejs:image.bzl", "nodejs_image")
+
+ts_library(
+  name = "app_server",
+  srcs = glob(["*.ts"]),
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//express",
+    "@npm//compression"
+  ]
+)
+
+nodejs_binary(
+  name = "server", 
+  data = [
+    ":app_server",
+    "@npm//express",
+    ":index.html",
+    "//src/client:bundle_prod"
+  ],
+  entry_point = "../server.js",
+)
+
+nodejs_image(
+    name = "app_image",
+    entry_point = "svelte_bazel_example/src/backend/server.js",
+    node_modules = "@npm//:node_modules",
+    data = ["//src/client:bundle_prod", ":app_server", ":index.html"]
+)

@@ -8,9 +8,9 @@ svelte(
   name = "app",
   entry_point = "App.html",
   srcs = ["main.js"],
-  deps = ["//src/frontend/treeview", 
-          "//src/frontend/grid",
-          "//src/frontend/friends",
+  deps = [
+    "//src/client/treeview", 
+    "//src/client/grid"
   ]
 )
 
@@ -18,7 +18,7 @@ sass_binary(
   name = "styles",
   src = "app.scss",
   deps = [
-    "//src/frontend/styles"
+    "//src/client/styles"
   ]
 )
 
@@ -43,7 +43,7 @@ bundle_dev(
 nodejs_binary(
   name = "dev_server",
   entry_point = "lite-server/bin/lite-server",
-  templated_args = ["--baseDir=src/frontend"],
+  templated_args = ["--baseDir=src/client"],
   tags = ["ibazel_notify_changes"],
   data = [
       "index.html",
@@ -52,16 +52,3 @@ nodejs_binary(
   ],
 )
 
-nodejs_binary(
-  name = "prod_server",
-  entry_point = "lite-server/bin/lite-server",
-  templated_args = ["--baseDir=src/frontend", "--config=src/frontend/bs-config-prod.js"],
-  tags = ["ibazel_notify_changes"],
-  data = [
-      "index-prod.html",
-      ":bundle_prod",
-      "@npm//lite-server",
-      "@npm//compression",
-      "bs-config-prod.js"
-  ],
-)

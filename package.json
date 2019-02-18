@@ -3,15 +3,13 @@
     "@bazel/ibazel": "0.9.1",
     "@bazel/typescript": "0.25.0",
     "@bazel/bazel": "0.21.0",
-    "concurrently": "4.0.1",
     "lite-server": "2.4.0",
-    "typescript": "2.9.2"
+    "typescript": "2.9.2",
+    "compression": "1.7.2"
   },
   "scripts": {
-    "start-backend": "ibazel run //src/backend:api",
-    "start-prod": "concurrently \"ibazel run //src/frontend:prod_server\" \"npm run start-backend\" ",
-    "start-dev": "concurrently \"ibazel run //src/frontend:dev_server\" \"npm run start-backend\" ",
-    "bazel-version": "bazel version"
+    "start-prod": "bazel run //src/server",
+    "start-dev": "ibazel run //src/client:dev_server"
   },
   "dependencies": {
     "express": "4.16.3",
