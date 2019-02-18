@@ -7,6 +7,7 @@ This demo application consists of two parts
  - Node backend written in Typescript
 
 Blog posts: 
+
 http://www.syntaxsuccess.com/viewarticle/svelte-bazel-build
 
 http://www.syntaxsuccess.com/viewarticle/svelte-bazel-seed
