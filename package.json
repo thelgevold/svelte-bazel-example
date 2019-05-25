@@ -2,10 +2,10 @@
   "license": "MIT",
   "devDependencies": {
     "@bazel/ibazel": "0.9.1",
-    "@bazel/typescript": "0.25.0",
-    "@bazel/bazel": "0.21.0",
+    "@bazel/typescript": "0.26.0",
+    "@bazel/bazel": "0.25.1",
     "lite-server": "2.4.0",
-    "typescript": "2.9.2",
+    "typescript": "3.1.1",
     "compression": "1.7.2"
   },
   "scripts": {

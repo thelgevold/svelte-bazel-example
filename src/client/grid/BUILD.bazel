@@ -2,6 +2,7 @@ package(default_visibility = ["//visibility:public"])
 load("@build_bazel_rules_svelte//:defs.bzl", "svelte")
 
 svelte(
-  name = "grid",
-  entry_point = "Grid.html"
+  name = "Grid",
+  entry_point = "Grid.svelte",
+  srcs = ["person-service.js"]
 )

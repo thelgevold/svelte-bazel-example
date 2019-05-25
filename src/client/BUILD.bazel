@@ -2,23 +2,14 @@ package(default_visibility = ["//visibility:public"])
 
 load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary")
 load("@build_bazel_rules_svelte//:defs.bzl", "svelte", "bundle_dev", "bundle_prod")
-load("@io_bazel_rules_sass//sass:sass.bzl", "sass_binary")
 
 svelte(
-  name = "app",
-  entry_point = "App.html",
+  name = "App",
+  entry_point = "App.svelte",
   srcs = ["main.js"],
   deps = [
-    "//src/client/treeview", 
-    "//src/client/grid"
-  ]
-)
-
-sass_binary(
-  name = "styles",
-  src = "app.scss",
-  deps = [
-    "//src/client/styles"
+    "//src/client/treeview:Treeview", 
+    "//src/client/grid:Grid"
   ]
 )
 
@@ -26,8 +17,7 @@ bundle_prod(
   name = "bundle_prod",
   entry_point = "main.js",
   deps = [
-    ":app",
-    ":styles"
+    ":App",
   ],
 )
 
@@ -35,8 +25,7 @@ bundle_dev(
   name = "bundle_dev",
   entry_point = "main.js",
   deps = [
-    ":app",
-    ":styles"
+    ":App",
   ],
 )
 
