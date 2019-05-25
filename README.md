@@ -6,11 +6,5 @@ This demo application consists of two parts
  - Frontend written in Svelte
  - Node/Express application written in Typescript
 
-Blog posts: 
-
-http://www.syntaxsuccess.com/viewarticle/svelte-bazel-build
-
-http://www.syntaxsuccess.com/viewarticle/svelte-bazel-seed
-
 
 
