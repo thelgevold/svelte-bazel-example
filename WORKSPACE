@@ -25,8 +25,8 @@ http_archive(
 http_archive(
     name = "build_bazel_rules_svelte",
     url = "https://github.com/thelgevold/rules_svelte/archive/0.6.zip",
-    strip_prefix = "rules_svelte-0.5",
-    sha256 = "b3008800db1c9c2a5f88201613de82f2d2a57ac65fb209d6f04ea2accfca9385"
+    strip_prefix = "rules_svelte-0.6",
+    sha256 = "b0a5c7c39cb12fcc0cdff7cbf89a52a2b3ecfff2b13e7f566302144be3ae9856"
 ) 
 
 load("@build_bazel_rules_nodejs//:defs.bzl", "yarn_install")
