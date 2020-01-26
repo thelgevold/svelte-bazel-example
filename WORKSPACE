@@ -18,18 +18,18 @@ http_archive(
 
 http_archive(
     name = "build_bazel_rules_nodejs",
-    sha256 = "5c86b055c57e15bf32d9009a15bcd6d8e190c41b1ff2fb18037b75e0012e4e7c",
-    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/0.26.0/rules_nodejs-0.26.0.tar.gz"],
+    sha256 = "591d2945b09ecc89fde53e56dd54cfac93322df3bc9d4747cb897ce67ba8cdbf",
+    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/1.2.0/rules_nodejs-1.2.0.tar.gz"],
 )
 
 http_archive(
     name = "build_bazel_rules_svelte",
-    url = "https://github.com/thelgevold/rules_svelte/archive/0.8.zip",
-    strip_prefix = "rules_svelte-0.8",
-    sha256 = "34784cffec78dbf533431c3bd0f399d099bbe9ef50577939fd61ac7626ff241f"
+    url = "https://github.com/thelgevold/rules_svelte/archive/0.10.zip",
+    strip_prefix = "rules_svelte-0.10",
+    sha256 = "371ca8e9a5df644f18fe2fa03b1d2a5926979e70edd3ad5d1abe600120c8a216"
 ) 
 
-load("@build_bazel_rules_nodejs//:defs.bzl", "yarn_install")
+load("@build_bazel_rules_nodejs//:index.bzl", "yarn_install")
 
 yarn_install(
   name = "npm",

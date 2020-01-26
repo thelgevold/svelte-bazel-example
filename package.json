@@ -1,12 +1,11 @@
 {
   "license": "MIT",
   "devDependencies": {
-    "@bazel/ibazel": "0.9.1",
-    "@bazel/typescript": "0.26.0",
-    "@bazel/bazel": "0.25.1",
-    "lite-server": "2.4.0",
-    "typescript": "3.1.1",
-    "compression": "1.7.2"
+    "@bazel/ibazel": "0.11.1",
+    "@bazel/typescript": "1.2.0",
+    "@bazel/bazel": "2.0.0",
+    "lite-server": "2.5.4",
+    "typescript": "3.1.1"
   },
   "scripts": {
     "start-prod": "bazel run //src/server",
@@ -15,7 +14,7 @@
     "push-docker-image": "bazel run //src/server:push"
   },
   "dependencies": {
-    "express": "4.16.3",
-    "compression": "1.7.2"
+    "express": "4.17.1",
+    "compression": "1.7.4"
   }
 }

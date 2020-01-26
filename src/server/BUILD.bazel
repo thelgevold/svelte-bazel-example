@@ -1,4 +1,4 @@
-load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
 load("@npm_bazel_typescript//:index.bzl", "ts_library")
 load("@io_bazel_rules_docker//nodejs:image.bzl", "nodejs_image")
 
@@ -20,26 +20,32 @@ nodejs_binary(
     ":index.html",
     "//src/client:bundle_prod"
   ],
-  entry_point = "../server.js",
+  entry_point = "js_src",
 )
 
-nodejs_image(
-    name = "app_image",
-    entry_point = "svelte_bazel_example/src/server/server.js",
-    node_modules = "@npm//:node_modules",
-    data = ["//src/client:bundle_prod", ":app_server", ":index.html"]
+filegroup(
+    name = "js_src",
+    srcs = ["app_server"],
+    output_group = "es5_sources",
 )
 
-load(
-    "@io_bazel_rules_docker//container:container.bzl",
-    "container_push"
-)
+# nodejs_image(
+#     name = "app_image",
+#     entry_point = "svelte_bazel_example/src/server/server.js",
+#     node_modules = "@npm//:node_modules",
+#     data = ["//src/client:bundle_prod", ":app_server", ":index.html"]
+# )
 
-container_push(
-   name = "push",
-   image = ":app_image",
-   format = "Docker",
-   registry = "index.docker.io",
-   repository = "[TODO: ADD YOUR OWN REPO]",
-   tag = "1"
-)
+# load(
+#     "@io_bazel_rules_docker//container:container.bzl",
+#     "container_push"
+# )
+
+# container_push(
+#    name = "push",
+#    image = ":app_image",
+#    format = "Docker",
+#    registry = "index.docker.io",
+#    repository = "[TODO: ADD YOUR OWN REPO]",
+#    tag = "1"
+# )
