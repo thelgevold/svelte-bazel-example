@@ -18,6 +18,7 @@ bundle_prod(
   entry_point = "main.js",
   deps = [
     ":App",
+    "@npm//lodash"
   ],
 )
 
@@ -26,6 +27,7 @@ bundle_dev(
   entry_point = "main.js",
   deps = [
     ":App",
+    "@npm//lodash"
   ],
 )
 
