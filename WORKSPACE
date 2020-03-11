@@ -24,9 +24,9 @@ http_archive(
 
 http_archive(
     name = "build_bazel_rules_svelte",
-    url = "https://github.com/thelgevold/rules_svelte/archive/0.13.zip",
-    strip_prefix = "rules_svelte-0.13",
-    sha256 = "a18a7f39b2db007e711615b20582da79512fea1b62aaaf02d84a87aa5c6c5e86"
+    url = "https://github.com/thelgevold/rules_svelte/archive/0.15.zip",
+    strip_prefix = "rules_svelte-0.15",
+    sha256 = "1b04eb08ef80636929d152bb2f2733e36d9e0b8ad10aca7b435c82bd638336f5"
 ) 
 
 
