@@ -1,3 +1,5 @@
+Experimental Bazel rules for Svelte (https://github.com/thelgevold/rules_svelte)
+
 1) run `yarn install`
 
 2) run `yarn start-dev` or `start-prod` for dev build or production build respectively
