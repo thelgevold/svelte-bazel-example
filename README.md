@@ -8,5 +8,10 @@ This demo application consists of two parts
  - Frontend written in Svelte
  - Node/Express application written in Typescript
 
-Blog Post: https://www.syntaxsuccess.com/viewarticle/svelte-bazel-build
+Blog Posts: 
 
+https://www.syntaxsuccess.com/viewarticle/svelte-bazel-build
+
+https://www.syntaxsuccess.com/viewarticle/developing-svelte-with-dotnet
+
+https://www.syntaxsuccess.com/viewarticle/streaming-messagepack-api-with-svelte-and-asp-net-core
