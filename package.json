@@ -16,6 +16,6 @@
   "dependencies": {
     "express": "4.17.1",
     "compression": "1.7.4",
-    "lodash": "4.17.19"
+    "lodash": "4.17.21"
   }
 }
